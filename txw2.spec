@@ -1,4 +1,4 @@
-%_javapackages_macros
+%{?_javapackages_macros:%_javapackages_macros}
 Name: txw2
 Version: 20110809
 Release: 8.0%{?dist}
@@ -106,3 +106,31 @@ cp -rp target/site/apidocs/* %{buildroot}%{_javadocdir}/%{name}
 %files javadoc
 %{_javadocdir}/%{name}
 %doc license.txt
+
+
+%changelog
+* Sun Aug 04 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 20110809-8
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_20_Mass_Rebuild
+
+* Fri Feb 22 2013 Juan Hernandez <juan.hernandez@redhat.com> - 20110809-7
+- Add build dependency on maven-shared (rhbz 914555)
+
+* Fri Feb 15 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 20110809-6
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
+
+* Wed Feb 06 2013 Java SIG <java-devel@lists.fedoraproject.org> - 20110809-5
+- Update for https://fedoraproject.org/wiki/Fedora_19_Maven_Rebuild
+- Replace maven BuildRequires with maven-local
+
+* Sun Jul 22 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 20110809-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_18_Mass_Rebuild
+
+* Fri Mar 2 2012 Juan Hernandez <juan.hernandez@redhat.com> 20110809-3
+- Use the jar names from upstream
+- Add comments describing the patches
+
+* Fri Feb 17 2012 Juan Hernandez <juan.hernandez@redhat.com> 20110809-2
+- Cleanup of the spec file
+
+* Mon Jan 16 2012 Marek Goldmann <mgoldman@redhat.com> 20110809-1
+- Initial packaging
