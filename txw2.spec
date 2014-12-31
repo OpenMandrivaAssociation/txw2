@@ -1,9 +1,9 @@
 %{?_javapackages_macros:%_javapackages_macros}
 Name: txw2
 Version: 20110809
-Release: 8.0%{?dist}
+Release: 11.1
 Summary: Typed XML writer for Java
-
+Group:	Development/Java
 License: CDDL and GPLv2 with exceptions
 URL: https://txw.dev.java.net
 
@@ -31,7 +31,7 @@ BuildRequires: maven-javadoc-plugin
 BuildRequires: maven-release-plugin
 BuildRequires: maven-resources-plugin
 BuildRequires: maven-surefire-plugin
-BuildRequires: maven-surefire-provider-junit4
+BuildRequires: maven-surefire-provider-junit
 BuildRequires: maven-shared
 BuildRequires: args4j
 BuildRequires: xsom
@@ -96,10 +96,7 @@ install -d -m 755 %{buildroot}%{_javadocdir}/%{name}
 cp -rp target/site/apidocs/* %{buildroot}%{_javadocdir}/%{name}
 
 
-%files
-%{_mavenpomdir}/*
-%{_mavendepmapfragdir}/*
-%{_javadir}/*
+%files -f .mfiles
 %doc license.txt
 
 
