@@ -1,7 +1,7 @@
 %{?_javapackages_macros:%_javapackages_macros}
 Name: txw2
 Version: 20110809
-Release: 11.2
+Release: 11.3
 Summary: Typed XML writer for Java
 Group:	Development/Java
 License: CDDL and GPLv2 with exceptions
